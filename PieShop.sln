@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pie-shop", "pie-shop\pie-shop.csproj", "{372F67D0-A9CB-4246-B192-E81BCA4E6291}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PieShop", "PieShop\PieShop.csproj", "{372F67D0-A9CB-4246-B192-E81BCA4E6291}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
