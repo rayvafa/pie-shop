@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using PieShop.Models;
 
 namespace PieShop
 {
@@ -27,7 +28,8 @@ namespace PieShop
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Add framework services.
+            services.AddTransient<ICategoryRepository, MockCategoryRepository>();
+            services.AddTransient<IPieRepository, MockPieRepository>();
             services.AddMvc();
         }
 
@@ -44,7 +46,7 @@ namespace PieShop
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Pie/Error");
             }
 
             app.UseStaticFiles();
@@ -53,7 +55,7 @@ namespace PieShop
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Pie}/{action=Index}/{id?}");
             });
         }
     }
