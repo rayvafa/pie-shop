@@ -1,5 +1,5 @@
 ﻿using System;
-namespace pie-shop.Models
+namespace PieShop.Models
 {
 	public class Pie
 {

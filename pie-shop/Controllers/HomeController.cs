@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace pie_shop.Controllers
+namespace PieShop.Controllers
 {
     public class HomeController : Controller
     {
