@@ -28,5 +28,13 @@
     <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
     <Folder Include="wwwroot\images\pie\" />
+    <Folder Include="Views\ShoppingCard\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Components\" />
+    <Folder Include="Views\Shared\Components\" />
+    <Folder Include="Views\Shared\Components\ShoppingCartSummary\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Controllers\HomeController.css" />
   </ItemGroup>
 </Project>
