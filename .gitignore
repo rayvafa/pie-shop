@@ -42,3 +42,6 @@ Thumbs.db
 # IntelliJ Files
 *.iml
 .idea
+
+# Visual Studio Code Files
+.vscode
