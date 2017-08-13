@@ -35,5 +35,6 @@
     <Folder Include="Views\Shared\Components\ShoppingCartSummary\" />
     <Folder Include="TagHelpers\" />
     <Folder Include="Views\Contact\" />
+    <Folder Include="Views\Shared\Components\CategoryMenu\" />
   </ItemGroup>
 </Project>
