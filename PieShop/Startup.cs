@@ -61,6 +61,8 @@ namespace PieShop
                     name: "default",
                     template: "{controller=Pie}/{action=Index}/{id?}");
             });
+
+            DbInitializer.Seed(app);
         }
     }
 }
