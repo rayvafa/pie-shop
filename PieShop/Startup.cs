@@ -11,6 +11,7 @@ using PieShop.Models;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace PieShop
 {
@@ -33,6 +34,9 @@ namespace PieShop
         {
 			services.AddDbContext<AppDbContext>(options =>
 										 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+			services.AddIdentity<IdentityUser, IdentityRole>()
+				.AddEntityFrameworkStores<AppDbContext>();
 
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<IPieRepository, PieRepository>();
@@ -64,6 +68,7 @@ namespace PieShop
 
             app.UseStaticFiles();
             app.UseSession();
+            app.UseIdentity();
 
             app.UseMvc(routes =>
             {
