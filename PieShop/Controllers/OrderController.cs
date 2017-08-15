@@ -1,4 +1,5 @@
 ﻿using PieShop.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,8 @@ namespace PieShop.Controllers
 		}
 
 		[HttpPost]
+		[ValidateAntiForgeryToken]
+		[Authorize]
 		public IActionResult Checkout(Order order)
 		{
 			var items = _shoppingCart.GetShoppingCartItems();
